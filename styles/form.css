@@ -1,0 +1,284 @@
+/* Login form styles */
+#login-form {
+    width: 50%;
+    min-width: 320px;
+    max-width: 400px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 16px;
+    text-align: center;
+    padding: 25px 30px 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.dark-theme #login-form {
+    background-color: #2d2d44;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Form controls */
+.login-form-control {
+    border: 1px solid #e0e0e0;
+    margin-top: 12px;
+    display: block;
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+    color: #333;
+}
+
+body.dark-theme .login-form-control {
+    background-color: #1a1a2e;
+    border-color: #3d3d5c;
+    color: #e0e0e0;
+}
+
+body.dark-theme .login-form-control::placeholder {
+    color: #888;
+}
+
+.login-form-text:focus {
+    background-color: #fff;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+body.dark-theme .login-form-text:focus {
+    background-color: #16213e;
+    border-color: #667eea;
+}
+
+/* Login button */
+.login-form-button {
+    background-color: #667eea;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    margin-top: 16px;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme .login-form-button {
+    background: linear-gradient(135deg, #667eea 0%, #7086ed 100%);
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+}
+
+.login-form-button:hover {
+    background-color: #5568d3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+body.dark-theme .login-form-button:hover {
+    background: linear-gradient(135deg, #7086ed 0%, #7a90f0 100%);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.login-form-button:active {
+    transform: translateY(0);
+}
+
+.login-form-button:focus {
+    background-color: #667eea !important;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+body.dark-theme .login-form-button:focus {
+    background: linear-gradient(135deg, #667eea 0%, #7086ed 100%) !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.login-form-button:focus:hover {
+    background-color: #5568d3 !important;
+}
+
+body.dark-theme .login-form-button:focus:hover {
+    background: linear-gradient(135deg, #7086ed 0%, #7a90f0 100%) !important;
+}
+
+.login-form-button:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    transform: none;
+    background-color: #667eea;
+}
+
+body.dark-theme .login-form-button:disabled {
+    background: linear-gradient(135deg, #667eea 0%, #7086ed 100%);
+}
+
+/* Loading state */
+.login-form-button.loading {
+    position: relative;
+    color: transparent;
+    background-color: #667eea;
+    pointer-events: none;
+}
+
+body.dark-theme .login-form-button.loading {
+    background: linear-gradient(135deg, #667eea 0%, #7086ed 100%);
+}
+
+.login-form-button.loading:hover {
+    transform: none;
+    background-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+body.dark-theme .login-form-button.loading:hover {
+    background: linear-gradient(135deg, #667eea 0%, #7086ed 100%);
+}
+
+.login-form-button.loading:active {
+    transform: none;
+    background-color: #667eea;
+}
+
+body.dark-theme .login-form-button.loading:active {
+    background: linear-gradient(135deg, #667eea 0%, #7086ed 100%);
+}
+
+.login-form-button.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to { transform: rotate(360deg); }
+}
+
+/* Form link */
+.login-form-link {
+    font-size: 12px;
+    text-decoration: none;
+    color: #999;
+    margin-top: 16px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .login-form-link {
+    color: #aaa;
+}
+
+.login-form-link:hover {
+    color: #667eea;
+}
+
+/* Password toggle button */
+.toggle-password-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #667eea;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.toggle-password-btn:hover {
+    background-color: rgba(102, 126, 234, 0.1);
+}
+
+/* Error messages */
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 6px;
+    margin-left: 4px;
+    min-height: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body.dark-theme .error-message {
+    color: #ff6b6b;
+}
+
+.error-message.show {
+    opacity: 1;
+}
+
+.login-form-control.error {
+    border-color: #e74c3c;
+    background-color: #fff5f5;
+}
+
+body.dark-theme .login-form-control.error {
+    border-color: #ff6b6b;
+    background-color: #2d1f1f;
+}
+
+.login-form-control.error:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+body.dark-theme .login-form-control.error:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+/* Remember me checkbox */
+.remember-me-container {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+.remember-checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #667eea;
+}
+
+.remember-label {
+    margin-left: 8px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    user-select: none;
+}
+
+body.dark-theme .remember-label {
+    color: #aaa;
+}

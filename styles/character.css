@@ -1,0 +1,344 @@
+/* Character/Emoji styles and animations */
+
+/* Character container */
+#login-form-emoji-zone {
+    width: 150px;
+    height: 140px;
+    margin: 0 auto 15px;
+    position: relative;
+}
+
+/* Character head */
+#emoji-head {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #3088c2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: breathing 2s ease infinite;
+    transition: .5s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme #emoji-head {
+    background-color: #e8e8f0;
+    border-color: #667eea;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes breathing {
+    0% {
+        margin-top: 0px;
+        transform: scale(1);
+    }
+    50% {
+        margin-top: 5px;
+        transform: scale(1.01);
+    }
+    100% {
+        margin-top: 0px;
+        transform: scale(1);
+    }
+}
+
+/* Eyes */
+.emoji-eye {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #3088c2;
+    position: absolute;
+    transition: .1s ease;
+}
+
+body.dark-theme .emoji-eye {
+    background-color: #f5f5f5;
+    border-color: #667eea;
+}
+
+.emoji-eye-closed {
+    width: 40px;
+    height: 2px;
+    border: 2px solid #3088c2;
+    border-radius: 0px;
+    position: absolute;
+}
+
+body.dark-theme .emoji-eye-closed {
+    border-color: #667eea;
+}
+
+.emoji-eye:nth-child(1) {
+    top: 16px;
+    left: 6px;
+}
+
+.emoji-eye-closed:nth-child(1) {
+    top: 56px;
+    left: 6px;
+}
+
+.emoji-eye:nth-child(2) {
+    top: 16px;
+    right: 6px;
+}
+
+.emoji-eye-closed:nth-child(2) {
+    top: 56px;
+    right: 6px;
+}
+
+/* Pupils */
+.emoji-pupil {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    background-color: #3088c2;
+    border-radius: 50%;
+    display: block;
+    transition: .25s ease;
+}
+
+.emoji-pupil.whistling {
+    animation: look-around 1.5s ease-in-out infinite;
+}
+
+@keyframes look-around {
+    0%, 100% {
+        left: 7px;
+        bottom: 18px;
+    }
+    25% {
+        left: 3px;
+        bottom: 18px;
+    }
+    50% {
+        left: 15px;
+        bottom: 18px;
+    }
+    75% {
+        left: 20px;
+        bottom: 18px;
+    }
+}
+
+body.dark-theme .emoji-pupil {
+    background-color: #667eea;
+}
+
+.emoji-pupil-closed {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    background-color: #3088c2;
+    border-radius: 50%;
+}
+
+body.dark-theme .emoji-pupil-closed {
+    background-color: #667eea;
+}
+
+.emoji-pupil-whistle{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 18px;
+    left: 7px;
+    background-color: #3088c2;
+    border-radius: 50%;
+    display: block;
+}
+
+body.dark-theme .emoji-pupil-whistle {
+    background-color: #667eea;
+}
+
+/* Mouth */
+.emoji-mouth {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #3088c2 30%, #3088c2 100%);
+    border: 2px solid #3088c2;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    animation: breathing 2s ease-in infinite;
+    transition: .5s ease;
+}
+
+body.dark-theme .emoji-mouth {
+    background: linear-gradient(to bottom, #e8e8f0 0%, #e8e8f0 30%, #667eea 30%, #667eea 100%);
+    border-color: #667eea;
+}
+
+.emoji-mouth-whistle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #3088c2 30%, #3088c2 100%);
+    border: 2px solid #3088c2;
+    border-radius: 50%;
+    left:20px;
+    right: auto;
+    bottom: 35px;
+    animation: whistling  1s ease-in infinite;
+}
+
+body.dark-theme .emoji-mouth-whistle {
+    background: linear-gradient(to bottom, #e8e8f0 0%, #e8e8f0 30%, #667eea 30%, #667eea 100%);
+    border-color: #667eea;
+}
+
+@keyframes whistling {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1,1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Character container animations */
+#emoji{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: .5s ease-in-out;
+    animation: entrance 0.8s ease-out;
+}
+
+@keyframes entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#emoji.shake {
+    animation: shake-head 0.5s ease;
+}
+
+#emoji.bounce {
+    animation: bounce-head 0.6s ease;
+}
+
+#emoji.surprised {
+    animation: none;
+}
+
+.emoji-eye.blink {
+    animation: quick-blink 0.3s ease;
+}
+
+@keyframes quick-blink {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.1);
+    }
+}
+
+/* Emotion states */
+.emoji-eye.sad {
+    transform: scaleY(0.7);
+}
+
+.emoji-pupil.sad {
+    bottom: 5px !important;
+}
+
+.emoji-mouth.sad {
+    transform: rotate(180deg) scaleY(0.6);
+    animation: none;
+}
+
+.emoji-eye.happy {
+    transform: scale(1.1);
+}
+
+.emoji-pupil.happy {
+    bottom: 15px !important;
+    animation: sparkle 0.6s ease infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.emoji-mouth.happy {
+    width: 110px;
+    height: 55px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+.emoji-pupil.thinking {
+    animation: thinking-look 1.5s ease-in-out infinite;
+}
+
+@keyframes thinking-look {
+    0%, 100% {
+        left: 15px;
+        bottom: 18px;
+    }
+    25% {
+        left: 10px;
+        bottom: 20px;
+    }
+    50% {
+        left: 20px;
+        bottom: 18px;
+    }
+    75% {
+        left: 15px;
+        bottom: 22px;
+    }
+}
+
+.emoji-mouth.thinking {
+    width: 80px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Character animations */
+@keyframes shake-head {
+    0%, 100% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(-10px) rotate(-5deg); }
+    50% { transform: translateX(10px) rotate(5deg); }
+    75% { transform: translateX(-10px) rotate(-5deg); }
+}
+
+@keyframes bounce-head {
+    0%, 100% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-20px) scale(1.05); }
+    50% { transform: translateY(-10px) scale(1.02); }
+    75% { transform: translateY(-15px) scale(1.03); }
+}

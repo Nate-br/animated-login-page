@@ -1,0 +1,92 @@
+/* Social login buttons */
+.social-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 16px 0 12px;
+    color: #999;
+    font-size: 12px;
+}
+
+.social-divider::before,
+.social-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+body.dark-theme .social-divider::before,
+body.dark-theme .social-divider::after {
+    border-bottom-color: #3d3d5c;
+}
+
+.social-divider span {
+    padding: 0 12px;
+}
+
+body.dark-theme .social-divider {
+    color: #aaa;
+}
+
+.social-login-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1 1 calc(50% - 5px);
+    min-width: 0;
+}
+
+.github-btn {
+    flex: 1 1 100%;
+}
+
+body.dark-theme .social-btn {
+    background: #1a1a2e;
+    border-color: #3d3d5c;
+    color: #e0e0e0;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .social-btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.google-btn:hover {
+    border-color: #4285F4;
+}
+
+.facebook-btn:hover {
+    border-color: #1877F2;
+}
+
+.github-btn:hover {
+    border-color: #333;
+}
+
+body.dark-theme .github-btn svg path {
+    fill: #e0e0e0;
+}
