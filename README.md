@@ -3,8 +3,8 @@
 A modern, interactive login page featuring an animated character that responds to user interactions. Built with vanilla JavaScript, modular CSS, and smooth animations.
 
 ![Login Page Preview](images/img1.png)
-![Login Page Preview](images/img2.png)
 ![Login Page Preview](images/img3.png)
+![Login Page Preview](images/img2.png)
 
 
 ## ✨ Features
