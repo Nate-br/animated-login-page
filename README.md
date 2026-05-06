@@ -4,40 +4,33 @@ A modern, interactive login page featuring an animated character that responds t
 
 🔗 **[View Live Demo](https://nate-br.github.io/animated-login-page/)**
 
-![Login Page Preview](images/calfc.png)
+![Login Page Preview](images/img1.png)
+![Login Page Preview](images/img3.png)
+![Login Page Preview](images/img2.png)
 
 ## ✨ Features
 
 ### 🎭 Character Animations
-- **Mouse Tracking** - Eyes follow your cursor around the screen
-- **Input Reactions** - Character looks down when typing username
-- **Password Privacy** - Character whistles and looks away when password field is focused
-- **Show/Hide Password** - Character peeks when password is visible
-- **Success Animation** - Happy face with sparkling eyes and bounce on successful login
-- **Error Animation** - Sad face with head shake on failed login
-- **Loading State** - Thoughtful expression while processing login
-- **Idle Behaviors** - Random blinking and head rotations
-- **Theme Toggle Reaction** - Character blinks when switching themes
-- **Entrance Animation** - Character slides up and fades in on page load
+- **Mouse Tracking**
+- **Input Reactions** 
+- **Password Privacy** 
+- **Show/Hide Password** 
+- **Success Animation** 
+- **Error Animation** 
+- **Loading State** 
+- **Idle Behaviors**
+- **Theme Toggle Reaction** 
+- **Entrance Animation** 
 
 ### 🎨 User Interface
-- **Dark/Light Theme** - Glass liquid toggle switch with smooth transitions
-- **Form Validation** - Real-time error messages for empty fields
-- **Remember Me** - Checkbox to save username for next visit
-- **Social Login Buttons** - Google, Facebook, and GitHub options
-- **Responsive Design** - Optimized for desktop, tablet, and mobile
-- **Smooth Animations** - Professional transitions and effects throughout
-
-### 🔐 Authentication
-- **Form Validation** - Checks for empty username and password
-- **Login Logic** - Demo authentication system
-- **Error Handling** - Clear error messages for incorrect credentials
-- **Loading State** - Visual feedback during login process
+- **Dark/Light Theme** - Glass liquid toggle
+- **Responsive Design** 
+- **Smooth Animations** 
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
+- A modern web browser
 - Python 3 (for local server) or any HTTP server
 
 ### Installation
@@ -60,10 +53,6 @@ A modern, interactive login page featuring an animated character that responds t
    ```
 
 ### Test Credentials
-
-For demo purposes, use these credentials:
-- **Username:** `admin`
-- **Password:** `password`
 
 Any other combination will show an error message.
 
@@ -92,25 +81,19 @@ login/
 │   └── rotation.wav       # Head rotation sound
 └── images/
     └── calfc.png          # Favicon
+    └── img1.png           # preview 1
+    └── img2.png           # preview 3
+    └── img3.png           # preview 2
 ```
 
-## 🎮 How to Use
 
-1. **Type in the username field** - Character looks down at your typing
-2. **Move to password field** - Character whistles and looks away
-3. **Click "Show" button** - Character peeks at the password
-4. **Move your mouse** - Eyes follow your cursor (when not typing)
-5. **Click LOGIN** - Character thinks, then shows happy or sad face
-6. **Toggle theme** - Switch between light and dark mode
-7. **Check "Remember me"** - Username will be saved for next visit
+## 🛠️ tools Used
 
-## 🛠️ Technologies Used
-
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with animations
-- **JavaScript (ES6 Modules)** - Modular, organized code
-- **SVG** - Hand-drawn character graphics
-- **Web Audio API** - Sound effects
+- **HTML5** 
+- **CSS3**
+- **JavaScript (ES6 Modules)** 
+- **SVG**
+- **Web Audio API** 
 
 ## 🎨 Customization
 
@@ -126,12 +109,6 @@ Extend `character.js` with new animation functions and trigger them from `main.j
 ### Change Credentials
 Edit the `checkCredentials` function in `auth.js` to change or add authentication logic.
 
-## 📱 Browser Support
-
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## 🔊 Audio
 
@@ -142,25 +119,6 @@ The page includes optional sound effects:
 
 Audio volume is set to 20% by default and can be adjusted in `character.js`.
 
-## 🌐 Features Breakdown
-
-### Form Features
-- Real-time validation
-- Error state styling
-- Loading spinner
-- Password visibility toggle
-- Remember me functionality
-- Enter key navigation
-
-### Character States
-- **Neutral** - Default resting state
-- **Looking Down** - When typing username
-- **Whistling** - When password field is focused
-- **Peeking** - When password is visible
-- **Thinking** - During login process
-- **Happy** - On successful login
-- **Sad** - On failed login
-- **Blinking** - Random idle animation
 
 ## 📝 License
 
