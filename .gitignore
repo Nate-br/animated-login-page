@@ -40,3 +40,5 @@ yarn.lock
 # Build outputs (if added later)
 dist/
 build/
+.vercel
+.env*.local

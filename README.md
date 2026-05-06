@@ -2,6 +2,8 @@
 
 A modern, interactive login page featuring an animated character that responds to user interactions. Built with vanilla JavaScript, modular CSS, and smooth animations.
 
+🔗 **[View Live Demo](https://nate-br.github.io/animated-login-page/)**
+
 ![Login Page Preview](images/calfc.png)
 
 ## ✨ Features
